@@ -1,0 +1,134 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+  {
+    "type": "Feature",
+    "properties": {
+      "id": 1,
+      "name": "Karli",
+      "address": "Plaça de la Infància, 11 08020 Barcelona", 
+      "phone": 933059935,
+      "web": "https://karli.es/",
+      "tags": ["tapas", "menu", "km0"],
+      "image":"/images/karli.png"
+      },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [2.19737, 41.41369]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties":{
+      "id": 2,
+      "name": "Tío Joe",
+      "address": "Via Augusta, 9 08006 Barcelona", 
+      "phone": 932013569,
+      "web": "https://www.tiojoe.es/",
+      "tags": ["brasa", "hamburguesas"],
+      "image":"/images/tio-joe.png"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.15477, 41.39642]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties":{
+      "id": 3,
+      "name": "Aguaribay",
+      "address": "Carrer del Taulat, 95 08005 Barcelona", 
+      "phone": 933003790,
+      "web": "http://www.aguaribay-bcn.com/",
+      "tags": ["vegetariano", "vegano"],
+      "image": "/images/aguaribay.jpg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.20517, 41.39923]
+    }
+  },
+  {
+    "type": "Feature",
+      "properties":{
+        "id": 4,
+        "name": "Caffeine",
+        "address": "Carrer de Bilbao, 98 08005 Barcelona", 
+        "phone": 661203978,
+        "web": "https://www.instagram.com/caffeinebcn/?hl=es",
+        "tags": ["vegetariano", "vegano", "desayunos", "menu", "rincón de juegos"],
+        "image":"/images/caffeine.jpg"
+      },
+      "geometry": {
+      "type": "Point",
+      "coordinates": [2.20032, 41.40548]
+      }
+  },
+  {
+  "type": "Feature",
+    "properties":{
+      "id": 5,
+      "name": "Video Instan",
+      "address": "Carrer de Viladomat, 98 08029 Barcelona", 
+      "phone": 934530000,
+      "web": "https://www.videoinstan.net/",
+      "tags": ["videoclub", "cine para niños", "cine en familia", "cafeteria", "zona de juegos"],
+      "image":"/images/video-instan.jpg"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.15782, 41.37963]
+    }
+  },
+  {
+  "type": "Feature",
+    "properties":{
+      "id": 6,
+      "name": "Doble Zeroo",
+      "address": "Carrer Jaume Giralt, 53 08003 Barcelona", 
+      "phone": 680305774,
+      "web": "https://www.facebook.com/SushiDobleZeroo",
+      "tags": ["fusión", "asiática", "japonesa", "monitores"],
+      "image":"/images/doble-zeroo.webp"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.17874, 41.38800]
+    }
+  },
+  {
+  "type": "Feature",
+    "properties":{
+      "id": 7,
+      "name": "Suarna",
+      "address": "Carrer Llançà, 1 08015 Barcelona", 
+      "phone": 932696047,
+      "web": "https://www.restaurantesuarna.com/es/home/",
+      "tags": ["mediterránea", "menu infantil", "zona de juegos"],
+      "image":"/images/Suarna.jpg"
+
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.15140, 41.37556]
+    }
+  },
+  {
+  "type": "Feature",
+    "properties":{
+      "id": 8,
+      "name": "Semproniana",
+      "address": "Carrer Rosselló, 148 08036 Barcelona", 
+      "phone": 934531820,
+      "web": "https://semproniana.net/",
+      "tags": ["mediterránea", "talleres cocina para niños"],
+      "image":"/images/semproniana.png"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.15446, 41.39113]
+    }
+  }
+]
+}
