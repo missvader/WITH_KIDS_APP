@@ -1,15 +1,35 @@
-# Getting Started with Create React App
+# Sprint 9 WithKids App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It uses [Mapbox´s GL JS library](https://docs.mapbox.com/#maps) to allow users to find activities, restaurants and playgrounds near their area , and [Firestore](https://firebase.google.com/docs/firestore) as the database.
+Data provides from 3 different API:
+- [Open Data Generalitat de Catalunya](https://analisi.transparenciacatalunya.cat)
+- [Open Data Ajuntament de Barcelona](https://opendata-ajuntament.barcelona.cat)
+- [Open Data Diputacio de Barcelona](https://do.diba.cat/api/)
+### [Deployed Link](https://withkids.vercel.app/)
+<br>
 
-## Available Scripts
+## **Preview**
+## (aqui va la preview )
 
-In the project directory, you can run:
+---
 
-### `npm start`
-
+## :wrench: **Tech used in this project**
+Front_End: [Reactjs]() with [Tailwind CSS]() and [Daisy UI]().  Also used [React-icons]() and [Sweetalert2]()
+[Postman]() to tests APIS and [axios]() to fetch the data.
+[Firebase]() is used to users Authentication and [Firestore]() to store user´s list of favorites.
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### Buit With
+[![MapBox][MapBox.com]][Mapbox-url]
+
+### Tools used
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+
+### APIs Used:
+
+
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
