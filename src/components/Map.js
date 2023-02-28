@@ -34,7 +34,6 @@ const Map = () => {
     map.on("load", () => {
       map.addImage('lila', imageIconLila);
       map.addImage("naranja", imageIconNaranja );
-      /*map.addImage("verde", imageIconVerde);*/
       map.addImage("amarillo", imageIconYellow);
       //SOURCES
       map.addSource("biblio", {
@@ -56,8 +55,9 @@ const Map = () => {
         source: "biblio",
         layout: {
           "icon-image": 'lila',
-          "icon-size": 0.20
+          "icon-size": 0.60,
         }
+        
       });
       map.addLayer({
         id: "actividades",

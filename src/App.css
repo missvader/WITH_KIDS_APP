@@ -135,7 +135,7 @@
   }
 }
 @media screen and (max-width: 750px){
-  .mapboxgl-layer.icon.icon-size {
+  .iconMap{
       width: 20px;
   }
 }
