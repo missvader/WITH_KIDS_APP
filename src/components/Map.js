@@ -55,7 +55,7 @@ const Map = () => {
         source: "biblio",
         layout: {
           "icon-image": 'lila',
-          "icon-size": 1,
+          "icon-size": 3,
         }
         
       });
