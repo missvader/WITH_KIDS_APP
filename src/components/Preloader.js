@@ -7,7 +7,7 @@ const Preloader = () => {
   return (
    <div className=" flex flex-col static w-screen h-full mx-auto " id="">
       <img src={Background} alt="background" className="bg-image w-screen fixed bottom-0 opacity-70 md:h-5/6"/>
-      <div className="container absolute flex flex-col mx-auto lg:ml-20 ">
+      <div className="container absolute flex flex-col mx-auto lg:ml-18 ">
       <div className="mx-14 mt-12">
         <p className="text-center text-xl  text-azul uppercase mx-8 font-normal lg:text-2xl">Disfruta de la ciutat amb nens</p>
       </div>
