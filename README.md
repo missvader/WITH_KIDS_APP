@@ -18,11 +18,10 @@ Data provides from 3 different API:
 Front_End: [Reactjs]() with [Tailwind CSS]() and [Daisy UI]().  Also used [React-icons]() and [Sweetalert2]()
 [Postman]() to tests APIS and [axios]() to fetch the data.
 [Firebase]() is used to users Authentication and [Firestore]() to store user´s list of favorites.
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 
 ### Buit With
-[![MapBox][MapBox.com]][Mapbox-url]
+[![MapBox]![MapBox.com]]![Mapbox-url]
 
 ### Tools used
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
