@@ -1,5 +1,6 @@
 import React, {useState, useContext} from "react";
-import { FaHeart, FaRegHeart,FaCalendar} from 'react-icons/fa';
+import { favoritesMessage} from '../utils/messages'
+import { FaHeart, FaRegHeart,FaCalendar, FaPhone} from 'react-icons/fa';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 import {db} from "../firebase/firebase";
 import { AuthContext } from "../contexts/AuthProvider";
@@ -30,7 +31,7 @@ const Biblio = ({titol,id, tags, adreca, espai, data,telefon, dies,horari, durad
         })
       })
     }else{
-      alert('Inicia sesión para guardar favoritos')
+      favoritesMessage();
     }
   }
   return (
@@ -50,7 +51,10 @@ const Biblio = ({titol,id, tags, adreca, espai, data,telefon, dies,horari, durad
         <div className="px-2 pb-2 font-sans font-medium">
           <p className="py-1 uppercase">{espai}</p>
           <p className="py-1">{adreca}</p>
-          <p className="py-1">{telefon}</p>
+          <div className="py-1 flex my-2">
+            <FaPhone className="" size={20}/> 
+            <p>&nbsp;{telefon}</p>
+          </div>
           <div className="py-1 flex my-2">
               <FaCalendar className="" size={20}/> 
               <p>&nbsp;INICIO: {formatedDate}</p>
@@ -83,7 +87,7 @@ const Biblio = ({titol,id, tags, adreca, espai, data,telefon, dies,horari, durad
               }
             </div> 
         </div> 
-        <div className="card-actions flex justify-between">
+        <div className="card-actions flex justify-between px-2">
           <button className=" heart "
             onClick={addFavoriteBiblio}>
               {like ? 

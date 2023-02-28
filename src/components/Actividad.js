@@ -1,4 +1,5 @@
 import React, {useState, useContext} from "react";
+import { favoritesMessage} from '../utils/messages'
 import { FaHeart, FaRegHeart, FaCalendar, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 import {db} from "../firebase/firebase";
@@ -39,19 +40,19 @@ const Actividad = ({titol,id, adreca, espai,horari,tags, telefon, email, data, i
         })
       })
     }else{
-      alert('Inicia sesión para guardar favoritos')
+      favoritesMessage();
     }
   }
 
   return (
     <div className="mb-4 container-cards ">
       <div className="card  bg-naranjaCard shadow-xl m-10 rounded ">
-        <figure className="w-full h-[250px]">
+        <figure className="">
           <img 
           src={urlImage} 
           alt="agenda activity image"
           onError={(e) => (e.currentTarget.src = urlErrorImage)}
-          className= "object-cover rounded lg:w-full"
+          className= "h-[223px] w-full  rounded "
           />
         </figure>
       <div className="card-body ">
@@ -101,7 +102,7 @@ const Actividad = ({titol,id, adreca, espai,horari,tags, telefon, email, data, i
               }
           </div>
         </div> 
-        <div className="card-actions flex justify-between">
+        <div className="card-actions flex justify-between px-2">
           <button onClick={addFavoriteAgenda}>
             {like ? 
               <FaHeart color="red" size="25px"/> :

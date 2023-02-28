@@ -38,3 +38,15 @@ Swal.fire({
   timer: 3000
 })
 }
+export const favoritesMessage = () => {
+  Swal.fire({
+    position:'center',
+    icon: 'warning',
+    title: 'Si vols dessar favorits, abans inicia sessió',
+    confirmButtonText: '<a href="/login">Login</a>',
+    confirmButtonColor: '#9B328B',
+    showCancelButton: true,
+    cancelButtonText: 'No, gràcies',
+    
+})
+}

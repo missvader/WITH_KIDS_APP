@@ -1,6 +1,7 @@
 import React , {useState, useContext} from "react";
+import { favoritesMessage} from '../utils/messages'
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
-import { FaHeart, FaRegHeart} from 'react-icons/fa';
+import { FaHeart, FaRegHeart, FaPhone} from 'react-icons/fa';
 import { AuthContext } from "../contexts/AuthProvider"; 
 import { db } from "../firebase/firebase";
 
@@ -23,7 +24,7 @@ const Restaurant = ({name, address, web, phone, tags, image,id}) => {
         })
       })
     }else{
-      alert('Inicia sesión para guardar favoritos')
+      favoritesMessage();
     }
   }
   return (
@@ -42,7 +43,10 @@ const Restaurant = ({name, address, web, phone, tags, image,id}) => {
           </div>
           <div className="px-2 pb-2 font-sans font-medium">
             <p className="py-1 ">{address}</p>
-            <p className="py-1">{phone}</p>
+            <div className="py-1 flex my-2">
+              <FaPhone className="" size={20}/> 
+              <p>&nbsp;{phone}</p>
+            </div>
             <div className="flex flex-wrap">
             {
               tags?.map((tag, index)=> {
@@ -55,7 +59,7 @@ const Restaurant = ({name, address, web, phone, tags, image,id}) => {
               }
             </div>
           </div> 
-          <div className="card-actions flex justify-between">
+          <div className="card-actions flex justify-between px-2">
             <button onClick={addFavoriteRest}>
               {like ? 
               <FaHeart color="red" size="25px"/> :

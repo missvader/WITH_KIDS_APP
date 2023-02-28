@@ -1,5 +1,7 @@
 import React from "react";
 import {NavLink } from 'react-router-dom';
+import { AuthContext } from "../contexts/AuthProvider";
+import { useContext } from "react";
 import Icon from '@mdi/react';
 import { mdiAccount } from '@mdi/js';
 import { mdiTicket } from '@mdi/js';
@@ -7,7 +9,8 @@ import { mdiSilverwareForkKnife } from '@mdi/js';
 import { mdiBookOpenPageVariant } from '@mdi/js';
 import { mdiMapOutline } from '@mdi/js';
 const Nav = () => {
- 
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="">
       <div className="btm-nav flex flex-col pb-5 bg-blanco w-full pb-5  rounded-t">
@@ -21,7 +24,8 @@ const Nav = () => {
           </NavLink>
         </div>
         <div className="flex flex-row w-full">
-          <NavLink
+          {currentUser !== null?
+          (<NavLink
           to={"./profile"}
           className= "nav-item "
           >
@@ -29,7 +33,16 @@ const Nav = () => {
               <Icon path={mdiAccount} size={1} />
             </i>
             <span className="nav-text text-sm font-bold">Usuari</span>
-          </NavLink>
+          </NavLink>)
+          : (<NavLink
+            to={"./login"}
+            className= "nav-item "
+            >
+              <i className="icon user-icon">
+                <Icon path={mdiAccount} size={1} />
+              </i>
+              <span className="nav-text text-sm font-bold">Login</span>
+            </NavLink>)}
           <NavLink 
         to={"./agendaCultural"}
         className="nav-item ">
