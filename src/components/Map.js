@@ -1,5 +1,7 @@
-import React, { useRef, useEffect, useContext, useState} from 'react';
+import React, { useRef, useEffect, useContext} from 'react';
+// eslint-disable-next-line import/no-webpack-loader-syntax
 import mapboxgl from 'mapbox-gl'; 
+
 import { DataContext } from "../contexts/DataContext";
 import IconNaranja from "../assets/icons-map/_event-ticket.svg";
 import IconLila from "../assets/icons-map/_event-book.svg";
@@ -8,7 +10,8 @@ import IconYellow from "../assets/icons-map/_restaurant.svg"
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 const Map = () => {
-  const { actividades, actBiblio, parques,filteredAct, geoAgenda, geoParques, geoBiblio, geoRestaurantes} = useContext(DataContext);
+
+  const {  geoAgenda, geoBiblio, geoRestaurantes} = useContext(DataContext);
   const mapContainer = useRef(null);
   const imageIconLila = new Image();
   imageIconLila.src = IconLila;
