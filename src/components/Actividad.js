@@ -47,14 +47,14 @@ const Actividad = ({titol,id, adreca, espai,horari,tags, telefon, email, data, i
   return (
     <div className="mb-4 container-cards ">
       <div className="card  bg-naranjaCard shadow-xl m-10 rounded ">
-        <figure className="">
+        <div className=" w-full h-[223px]">
           <img 
           src={urlImage} 
-          alt="agenda activity image"
+          alt="agenda activity"
           onError={(e) => (e.currentTarget.src = urlErrorImage)}
-          className= "h-[223px] w-full  rounded "
+          className= "object-cover w-full h-full rounded "
           />
-        </figure>
+        </div>
       <div className="card-body ">
         <div className="card-title rounded-lg p-2"> 
           <h2 className="uppercase font-sans font-semibold">{titol}</h2>

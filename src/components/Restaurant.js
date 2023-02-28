@@ -30,13 +30,13 @@ const Restaurant = ({name, address, web, phone, tags, image,id}) => {
   return (
     <div className="mb-4 container-cards ">
       <div className="card bg-amarilloCard shadow-xl m-10 rounded ">
-        <figure>
+        <div className="w-full h-[223px]">
           <img
             src={image}
             alt="restaurant  image"
-            className="w-full h-[223px] rounded"
+            className="w-full h-full object-cover rounded"
           />
-        </figure>
+        </div>
         <div className="card-body">
           <div className="card-title  rounded-lg p-2"> 
             <h2 className="uppercase font-sans font-semibold">{name}</h2>
