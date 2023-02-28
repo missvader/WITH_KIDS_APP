@@ -57,7 +57,7 @@ const Biblio = ({titol,id, tags, adreca, espai, data,telefon, dies,horari, durad
           </div>
           <div className="py-1 flex my-2">
               <FaCalendar className="" size={20}/> 
-              <p>&nbsp;INICIO: {formatedDate}</p>
+              <p>&nbsp;INICI: {formatedDate}</p>
           </div> 
           <div className="flex flex-wrap">
             {

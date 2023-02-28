@@ -12,7 +12,7 @@ const Nav = () => {
   const { currentUser } = useContext(AuthContext);
 
   return (
-    <div className="">
+    <div className="absolute">
       <div className="btm-nav flex flex-col pb-5 bg-blanco w-full pb-5  rounded-t">
         <div className="flex m-auto ">
           <NavLink
