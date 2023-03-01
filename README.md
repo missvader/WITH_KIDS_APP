@@ -1,6 +1,7 @@
 # Sprint 9 WithKids App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 It uses [Mapbox´s GL JS library](https://docs.mapbox.com/#maps) to allow users to find activities, restaurants and playgrounds near their area , and [Firestore](https://firebase.google.com/docs/firestore) as the database.
 
 Data provides from 3 different API:
@@ -12,7 +13,7 @@ Data provides from 3 different API:
 <br>
 
 ## **Preview**
-## (aqui va la preview )
+## ![preview gif](src/assets/preview/withkids-preview.gif) ![preview gif](src/assets/preview/withkids-preview2.gif) ! [preview gif](src/assets/preview/withkids-preview3.gif) 
 
 ---
 
@@ -25,7 +26,6 @@ Front_End: [Reactjs]() with [Tailwind CSS]() and [Daisy UI]().  Also used [React
 ### Buit With
 
 * ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-* [![MapBox]![MapBox.com]]![Mapbox-url]
 * ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 * ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 * ![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
