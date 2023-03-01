@@ -6,6 +6,9 @@ import { DataContext } from "../contexts/DataContext";
 import IconNaranja from "../assets/icons-map/_event-ticket.svg";
 import IconLila from "../assets/icons-map/_event-book.svg";
 import IconYellow from "../assets/icons-map/_restaurant.svg"
+import IconNaranjaPng from "../assets/iconos-map-png/_event-ticket.png";
+import IconLilaPng from "../assets/iconos-map-png/_event-book.png";
+import IconYellowPng from "../assets/iconos-map-png/_restaurant.png"
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -14,11 +17,15 @@ const Map = () => {
   const {  geoAgenda, geoBiblio, geoRestaurantes} = useContext(DataContext);
   const mapContainer = useRef(null);
   const imageIconLila = new Image();
-  imageIconLila.src = IconLila;
+  /*imageIconLila.src = IconLila;*/
+  imageIconLila.src = IconLilaPng;
   const imageIconNaranja = new Image();
-  imageIconNaranja.src= IconNaranja;
+  /*imageIconNaranja.src= IconNaranja;*/
+  imageIconNaranja.src= IconNaranjaPng;
   const imageIconYellow = new Image();
-  imageIconYellow.src = IconYellow;
+  /*imageIconYellow.src = IconYellow;*/
+  imageIconYellow.src= IconYellowPng;
+  
   // this is where all of our map logic is going to live
   // adding the empty dependency array ensures that the map
   // is only rendered once
@@ -30,6 +37,20 @@ const Map = () => {
       zoom: 11.5,
       
     });
+    /*const getMobileOS = () => {
+      const ua = navigator.userAgent
+      if (/android/i.test(ua)) {
+        return "Android"
+      }
+      else if (/iPad|iPhone|iPod/.test(ua))
+         if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1){
+        return "iOS"
+      }
+      return "Other"
+    }
+    let sistema = getMobileOS();
+    alert("sistema operativo",sistema)*/
+
     // only want to work with the map after it has fully loaded
     map.on("load", () => {
       map.addImage('lila', imageIconLila);
@@ -55,9 +76,8 @@ const Map = () => {
         source: "biblio",
         layout: {
           "icon-image": 'lila',
-          "icon-size": 0.20,
-        }
-        
+          "icon-size": 0.50
+          }
       });
       map.addLayer({
         id: "actividades",
@@ -65,7 +85,7 @@ const Map = () => {
         source: "actividades",
         layout: {
           "icon-image": 'naranja',
-          "icon-size": 0.20
+          "icon-size": 0.50
         }
       });
       map.addLayer({
@@ -74,7 +94,7 @@ const Map = () => {
         source: "restaurantes",
         layout: {
           "icon-image": 'amarillo',
-          "icon-size": 0.20
+          "icon-size": 0.50
         }
       });
       //GEOLOCATION
