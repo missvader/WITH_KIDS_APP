@@ -8,6 +8,7 @@ import { mdiTicket } from '@mdi/js';
 import { mdiSilverwareForkKnife } from '@mdi/js';
 import { mdiBookOpenPageVariant } from '@mdi/js';
 import { mdiMapOutline } from '@mdi/js';
+import './Nav.css'
 const Nav = () => {
   const { currentUser } = useContext(AuthContext);
 

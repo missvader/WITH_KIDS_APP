@@ -83,10 +83,11 @@ const Map = () => {
         positionOptions: {
           enableHighAccuracy: true
         },
-        trackUserLocation: true
+        trackUserLocation: true,
+        showUserHeading: true
       });
       map.addControl(geolocate, "top-right");
-      
+      map.addControl(new mapboxgl.NavigationControl());
       
     })
     //---POPUPS PARCS--------------- 

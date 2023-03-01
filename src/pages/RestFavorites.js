@@ -1,10 +1,9 @@
 import React, {useContext, useState, useEffect } from "react";
 import {db} from "../firebase/firebase"
 import {updateDoc, doc,onSnapshot} from "firebase/firestore";
-import { BsTrashFill} from "react-icons/bs";
-import { FaPhone} from 'react-icons/fa';
 import { AuthContext } from "../contexts/AuthProvider";
 import NoFav from "../components/NoFav";
+import FavRest from "../components/FavRest";
 import HeaderRest from "../components/HeaderRest";
 import Background from "../assets/backgroundApp.png"
 
@@ -30,7 +29,6 @@ const RestFavorites = () => {
       } catch (error) {
         console.log(error.message)
       };
-  
     }
     
   return (
@@ -41,22 +39,15 @@ const RestFavorites = () => {
             <div className="mb-16  lg:mt-20">
             {
               (favRest.length > 0)
-              ? favRest.map((item, index)=> {
-                return (
-                  <div key={item.id} className=" grid grid-cols-2 border-2 bg-white border-amarilloCard mx-10 my-5  rounded">
-                    <div className="p-2">
-                      <p className="self-center ml-3 pb-2 text-gray-600 font-semibold uppercase">{item.name}</p>
-                      <div className="flex ml-2">
-                        <FaPhone/>
-                        <p className="self-center ml-1 text-gray-600 font-semibold">{item.phone}</p>
-                      </div>
-                    </div>
-                    <button className="justify-self-end self-end mr-3 mb-2" onClick={()=>deletedRest(item.id)}>
-                      <BsTrashFill size={25} color="red"/>
-                    </button>
-                  </div>
-                );
-              })
+              ? favRest.map((item, index)=> (
+                <FavRest
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  phone={item.phone}
+                  deletedRest={()=>deletedRest(item.id)}
+                />
+              ))
               : <NoFav/>
               }
             </div>

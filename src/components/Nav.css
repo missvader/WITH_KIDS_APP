@@ -1,0 +1,66 @@
+.nav{
+  /*flex:2;*/
+  padding: 25px 20px;
+}
+
+.nav-item{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.nav-item.active {
+  border-radius: 30px;
+  background: #eee;
+  justify-content: flex-start;
+}
+
+.nav-item.active > .nav-text {
+  display: inline-block;
+}
+.icon.parc-icon {
+  color: #24CE81;
+}
+.icon.parc-icon ~ .nav-text {
+  color: #24CE81;
+}
+.icon.user-icon {
+  color: #6986F6;
+}
+.icon.user-icon ~ .nav-text {
+  color: #6986F6;
+}
+.icon.agenda-icon {
+  color: #F48A4C;
+}
+.icon.agenda-icon ~ .nav-text {
+  color: #F48A4C;
+  ;
+}
+.icon.restaurant-icon {
+  color: #eab308;
+}
+.icon.restaurant-icon ~ .nav-text {
+  color: #eab308;
+}
+.icon.biblio-icon {
+  color: #9B328B;
+}
+.icon.biblio-icon ~ .nav-text {
+  color: #9B328B;
+}
+.nav-text {
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+  transition: all 0.3s ease;
+}
+.icon{
+  display: inline;
+  font-size: 32px;
+  transition: color .3s;
+}

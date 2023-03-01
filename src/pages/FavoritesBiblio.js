@@ -1,10 +1,10 @@
 import React, {useContext, useState, useEffect } from "react";
 import {db} from "../firebase/firebase"
 import {updateDoc, doc,onSnapshot} from "firebase/firestore";
-import { BsTrashFill} from "react-icons/bs";
 import { AuthContext } from "../contexts/AuthProvider";
 import HeaderBiblio from "../components/HeaderBiblio";
 import NoFav from "../components/NoFav";
+import FavBiblio from "../components/FavBiblio";
 import Background from "../assets/backgroundApp.png"
 
 
@@ -39,26 +39,16 @@ const deletedBiblio = async (passedID) => {
           <div className="mb-16  lg:text-lg">
             {
               (favBiblio.length > 0)
-              ? favBiblio.map((item)=> {
-                return (
-                  <div key={item.id} className=" grid grid-flow-cols bg-white border-2 border-lila mx-10 my-5 min-h-16 rounded">
-                    <div className="p-2">
-                      <p className="self-center ml-3 text-lila font-semibold uppercase">{item.titol}</p>
-                      <p className="self-center ml-3 text-lila font-semibold">{item.espai}</p>
-                      <button className="btn btn-xs bg-lila border-0 ml-3 mt-3">
-                        <a
-                          href={item.url}
-                          target='_blank'
-                          rel="noreferrer"
-                        >info</a>
-                      </button>
-                    </div>
-                    <button className="justify-self-end self-end mr-3 mb-2" onClick={()=>deletedBiblio(item.id)}>
-                      <BsTrashFill size={25} color="red"/>
-                    </button>
-                  </div>
-                )
-              })
+              ? favBiblio.map((item)=> (
+                <FavBiblio
+                  key={item.id}
+                  id={item.id}
+                  titol={item.titol}
+                  espai={item.espai}
+                  url={item.url}
+                  deletedBiblio={()=>deletedBiblio(item.id)}
+                />
+              ))
               : <NoFav/>  
               }
             </div>

@@ -23,7 +23,7 @@ function App() {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 25000);
+        }, 4000);
     },[]);
   return (
     <AuthProvider>

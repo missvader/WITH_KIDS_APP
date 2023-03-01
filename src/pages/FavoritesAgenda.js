@@ -1,11 +1,11 @@
 import React, {useContext, useState, useEffect } from "react";
 import {db} from "../firebase/firebase"
 import {updateDoc, doc, onSnapshot} from "firebase/firestore";
-import { BsTrashFill} from "react-icons/bs";
 import { AuthContext } from "../contexts/AuthProvider";
 import Background from "../assets/backgroundApp.png"
 import HeaderAgenda from "../components/HeaderAgenda";
 import NoFav from "../components/NoFav";
+import FavAgenda from "../components/FavAgenda";
 
 const FavoritesAgenda = () => {
   const {currentUser} = useContext(AuthContext)
@@ -38,26 +38,16 @@ const deletedAgenda = async (passedID) => {
             <div className="mb-16 lg:text-lg">
             {
               (favAgenda.length > 0)
-              ? favAgenda.map((item)=> {
-                return (
-                  <div key={item.id} className="grid grid-flow-cols bg-white border-2 border-naranja mx-10 my-5 min-h-16 rounded ">
-                    <div className="p-2">
-                      <p className="self-center ml-3 text-naranja font-semibold uppercase">{item.titol}</p>
-                      <p className="self-center ml-3 text-naranja font-semibold">{item.espai}</p>
-                      <button className="btn btn-xs bg-naranja border-0 ml-3 mt-3">
-                        <a
-                          href={item.linkToUrl}
-                          target='_blank'
-                          rel="noreferrer"
-                        >info</a>
-                      </button>
-                    </div>
-                    <button className="justify-self-end  mr-3 mb-2" onClick={()=>deletedAgenda(item.id)}>
-                      <BsTrashFill size={25}  color="red"/>
-                    </button>
-                  </div>
-                )
-              })
+              ? favAgenda.map((item)=> (
+                <FavAgenda
+                  key={item.id}
+                  id={item.id}
+                  titol={item.titol}
+                  espai={item.espai}
+                  linkToUrl={item.linkToUrl}
+                  deletedAgenda={()=>deletedAgenda(item.id)}
+                />
+              ))
               : <NoFav/>  
               }
             </div>

@@ -57,8 +57,6 @@ export const AuthProvider = ({ children }) => {
       console.log(error)
     }
   };
-  
-  
   //LOGIN
   const signIn = async (email, password) => {
     try {
@@ -100,7 +98,6 @@ export const AuthProvider = ({ children }) => {
     });
     console.log('currentUser es=>',currentUser)
   },[currentUser]);
-  
   
   return (
     <AuthContext.Provider value={{ 

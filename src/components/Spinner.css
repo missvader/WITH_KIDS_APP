@@ -1,0 +1,95 @@
+.spinftw {
+  border-radius:100%;
+  display:inline-block;
+  height:30px;
+  width:30px;
+  -webkit-animation:loader infinite 4s;
+     -moz-animation:loader infinite 4s;
+          animation:loader infinite 4s;
+  box-shadow:25px 25px #6986F6,
+    -25px 25px #9b59b6,
+    -25px -25px #F48A4C,
+    25px -25px #eab308;
+}
+
+
+@-webkit-keyframes loader {
+  0%,100% {
+      box-shadow:25px 25px #6986F6,
+        -25px 25px #9b59b6,
+        -25px -25px #F48A4C,
+        25px -25px #eab308;
+  }
+  25% {
+      box-shadow:-25px 25px #6986F6,
+        -25px -25px #9b59b6,
+        25px -25px #F48A4C,
+        25px 25px #eab308;
+  }
+  50% {
+      box-shadow:-25px -25px #6986F6,
+        25px -25px #9b59b6,
+        25px 25px #F48A4C,
+        -25px 25px #eab308;
+  }
+  75% {
+      box-shadow:25px -25px #6986F6,
+        25px 25px #9b59b6,
+        -25px 25px #F48A4C,
+        -25px -25px #eab308;
+  }
+}
+
+@-moz-keyframes loader {
+  0%,100% {
+      box-shadow:25px 25px #6986F6,
+        -25px 25px #9b59b6,
+        -25px -25px #F48A4C,
+        25px -25px #eab308;
+  }
+  25% {
+      box-shadow:-25px 25px #6986F6,
+        -25px -25px #9b59b6,
+        25px -25px #F48A4C,
+        25px 25px #eab308;
+  }
+  50% {
+      box-shadow:-25px -25px #6986F6,
+        25px -25px #9b59b6,
+        25px 25px #F48A4C,
+        -25px 25px #eab308;
+  }
+  75% {
+      box-shadow:25px -25px #6986F6,
+        25px 25px #9b59b6,
+        -25px 25px #F48A4C,
+        -25px -25px #eab308;
+  }
+}
+
+@keyframes loader {
+  0%,100% {
+      box-shadow:25px 25px #6986F6,
+        -25px 25px #9b59b6,
+        -25px -25px #F48A4C,
+        25px -25px #eab308;
+  }
+  25% {
+      box-shadow:-25px 25px #6986F6,
+        -25px -25px #9b59b6,
+        25px -25px #F48A4C,
+        25px 25px #eab308;
+  }
+  50% {
+      box-shadow:-25px -25px #6986F6,
+        25px -25px #9b59b6,
+        25px 25px #F48A4C,
+        -25px 25px #eab308;
+  }
+  75% {
+      box-shadow:25px -25px #6986F6,
+        25px 25px #9b59b6,
+        -25px 25px #F48A4C,
+        -25px -25px #eab308;
+  }
+}

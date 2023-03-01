@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap');
-/*.map{
-  flex:5;
-}*/
+
 .mapboxgl-popup-content{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight:bold;
@@ -33,72 +31,6 @@
   text-decoration: underline;
 }
 
-.nav{
-  /*flex:2;*/
-  padding: 25px 20px;
-}
-
-.nav-item{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-}
-.nav-item.active {
-  border-radius: 30px;
-  background: #eee;
-  justify-content: flex-start;
-}
-
-.nav-item.active > .nav-text {
-  display: inline-block;
-}
-.icon.parc-icon {
-  color: #24CE81;
-}
-.icon.parc-icon ~ .nav-text {
-  color: #24CE81;
-}
-.icon.user-icon {
-  color: #6986F6;
-}
-.icon.user-icon ~ .nav-text {
-  color: #6986F6;
-}
-.icon.agenda-icon {
-  color: #F48A4C;
-}
-.icon.agenda-icon ~ .nav-text {
-  color: #F48A4C;
-  ;
-}
-.icon.restaurant-icon {
-  color: #eab308;
-}
-.icon.restaurant-icon ~ .nav-text {
-  color: #eab308;
-}
-.icon.biblio-icon {
-  color: #9B328B;
-}
-.icon.biblio-icon ~ .nav-text {
-  color: #9B328B;
-}
-.nav-text {
-  font-size: 20px;
-  margin: auto;
-  text-align: center;
-  font-weight: 500;
-  display: none;
-  transition: all 0.3s ease;
-}
-.icon{
-  display: inline;
-  font-size: 32px;
-  transition: color .3s;
-}
 .map-container {
   height: 90%;
   width: 100vw;
@@ -119,101 +51,7 @@
 .input{
   width: 17rem;
 }
-.spinftw {
-  border-radius:100%;
-  display:inline-block;
-  height:30px;
-  width:30px;
-  -webkit-animation:loader infinite 4s;
-     -moz-animation:loader infinite 4s;
-          animation:loader infinite 4s;
-  box-shadow:25px 25px #6986F6,
-    -25px 25px #9b59b6,
-    -25px -25px #F48A4C,
-    25px -25px #eab308;
-}
 
-
-@-webkit-keyframes loader {
-  0%,100% {
-      box-shadow:25px 25px #6986F6,
-        -25px 25px #9b59b6,
-        -25px -25px #F48A4C,
-        25px -25px #eab308;
-  }
-  25% {
-      box-shadow:-25px 25px #6986F6,
-        -25px -25px #9b59b6,
-        25px -25px #F48A4C,
-        25px 25px #eab308;
-  }
-  50% {
-      box-shadow:-25px -25px #6986F6,
-        25px -25px #9b59b6,
-        25px 25px #F48A4C,
-        -25px 25px #eab308;
-  }
-  75% {
-      box-shadow:25px -25px #6986F6,
-        25px 25px #9b59b6,
-        -25px 25px #F48A4C,
-        -25px -25px #eab308;
-  }
-}
-
-@-moz-keyframes loader {
-  0%,100% {
-      box-shadow:25px 25px #6986F6,
-        -25px 25px #9b59b6,
-        -25px -25px #F48A4C,
-        25px -25px #eab308;
-  }
-  25% {
-      box-shadow:-25px 25px #6986F6,
-        -25px -25px #9b59b6,
-        25px -25px #F48A4C,
-        25px 25px #eab308;
-  }
-  50% {
-      box-shadow:-25px -25px #6986F6,
-        25px -25px #9b59b6,
-        25px 25px #F48A4C,
-        -25px 25px #eab308;
-  }
-  75% {
-      box-shadow:25px -25px #6986F6,
-        25px 25px #9b59b6,
-        -25px 25px #F48A4C,
-        -25px -25px #eab308;
-  }
-}
-
-@keyframes loader {
-  0%,100% {
-      box-shadow:25px 25px #6986F6,
-        -25px 25px #9b59b6,
-        -25px -25px #F48A4C,
-        25px -25px #eab308;
-  }
-  25% {
-      box-shadow:-25px 25px #6986F6,
-        -25px -25px #9b59b6,
-        25px -25px #F48A4C,
-        25px 25px #eab308;
-  }
-  50% {
-      box-shadow:-25px -25px #6986F6,
-        25px -25px #9b59b6,
-        25px 25px #F48A4C,
-        -25px 25px #eab308;
-  }
-  75% {
-      box-shadow:25px -25px #6986F6,
-        25px 25px #9b59b6,
-        -25px 25px #F48A4C,
-        -25px -25px #eab308;
-  }
-}
 @media (min-width: 1024px) { 
   .input{
     width: 25rem;
