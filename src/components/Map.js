@@ -76,7 +76,7 @@ const Map = () => {
         source: "biblio",
         layout: {
           "icon-image": 'lila',
-          "icon-size": 0.50
+          "icon-size": 0.75
           }
       });
       map.addLayer({
@@ -85,7 +85,7 @@ const Map = () => {
         source: "actividades",
         layout: {
           "icon-image": 'naranja',
-          "icon-size": 0.50
+          "icon-size": 0.75
         }
       });
       map.addLayer({
@@ -94,7 +94,7 @@ const Map = () => {
         source: "restaurantes",
         layout: {
           "icon-image": 'amarillo',
-          "icon-size": 0.50
+          "icon-size": 0.75
         }
       });
       //GEOLOCATION
