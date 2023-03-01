@@ -1,7 +1,7 @@
 import React, {useContext, useState, useEffect } from "react";
 import {db} from "../firebase/firebase"
-import {updateDoc, doc, getDoc, onSnapshot} from "firebase/firestore";
-import {AiOutlineDelete} from "react-icons/ai"
+import {updateDoc, doc, onSnapshot} from "firebase/firestore";
+import { BsTrashFill} from "react-icons/bs";
 import { AuthContext } from "../contexts/AuthProvider";
 import Background from "../assets/backgroundApp.png"
 import HeaderAgenda from "../components/HeaderAgenda";
@@ -17,6 +17,7 @@ useEffect(() => {
   onSnapshot(favAgendaID, (favoriteAgenda) => {
     setFavAgenda(favoriteAgenda.data().favoritesAgenda)
   })
+  // eslint-disable-next-line
 }, [currentUser.uid]);
 /*BORRAR FAVORITO */
 const deletedAgenda = async (passedID) => {
@@ -47,11 +48,12 @@ const deletedAgenda = async (passedID) => {
                         <a
                           href={item.linkToUrl}
                           target='_blank'
+                          rel="noreferrer"
                         >info</a>
                       </button>
                     </div>
-                    <button className="justify-self-end self-end mr-3 mb-2" onClick={()=>deletedAgenda(item.id)}>
-                      <AiOutlineDelete size={20} className=""/>
+                    <button className="justify-self-end  mr-3 mb-2" onClick={()=>deletedAgenda(item.id)}>
+                      <BsTrashFill size={25}  color="red"/>
                     </button>
                   </div>
                 )

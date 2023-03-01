@@ -33,7 +33,7 @@ const Restaurant = ({name, address, web, phone, tags, image,id}) => {
         <div className="w-full h-[223px]">
           <img
             src={image}
-            alt="restaurant  image"
+            alt="restaurant"
             className="w-full h-full object-cover rounded"
           />
         </div>

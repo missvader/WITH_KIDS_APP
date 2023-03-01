@@ -1,7 +1,7 @@
 import React, {useContext, useState, useEffect } from "react";
 import {db} from "../firebase/firebase"
 import {updateDoc, doc,onSnapshot} from "firebase/firestore";
-import {AiOutlineDelete} from "react-icons/ai"
+import { BsTrashFill} from "react-icons/bs";
 import { FaPhone} from 'react-icons/fa';
 import { AuthContext } from "../contexts/AuthProvider";
 import NoFav from "../components/NoFav";
@@ -18,6 +18,7 @@ const RestFavorites = () => {
     onSnapshot(favRestID, (favoriteRestaurant) => {
     setFavRest(favoriteRestaurant.data().favoritesRestaurants)
     })
+    // eslint-disable-next-line
   }, [currentUser.uid]);
   /*BORRAR FAVORITO */
   const deletedRest = async (passedID) => {
@@ -51,7 +52,7 @@ const RestFavorites = () => {
                       </div>
                     </div>
                     <button className="justify-self-end self-end mr-3 mb-2" onClick={()=>deletedRest(item.id)}>
-                      <AiOutlineDelete size={20}/>
+                      <BsTrashFill size={25} color="red"/>
                     </button>
                   </div>
                 );

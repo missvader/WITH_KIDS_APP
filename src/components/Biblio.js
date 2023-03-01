@@ -41,7 +41,7 @@ const Biblio = ({titol,id, tags, adreca, espai, data,telefon, dies,horari, durad
         <img 
         src={imatge} 
         onError={(e) => (e.target.src = errorImage)}
-        alt="biblio activity image"
+        alt="biblio activity"
         className="object-cover w-full h-full rounded "
         /></div>
       <div className="card-body">

@@ -21,6 +21,10 @@ const Preloader = () => {
         <div className="mb-5 mx-5 bg-dorado p-5 rounded">
           <p className="text-center lg:text-lg text-white ">TROBA PROPOSTES PER GAUDIR EN FAMILIA</p> 
         </div>
+        <div className="flex mx-auto mt-20 md:mt-40 ">
+          <div className="spinftw mx-auto"></div>
+        </div>
+        
       </div> 
       </div>
       

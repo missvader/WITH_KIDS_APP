@@ -1,7 +1,7 @@
 import React, {useContext, useState, useEffect } from "react";
 import {db} from "../firebase/firebase"
-import {updateDoc, doc, getDoc, onSnapshot} from "firebase/firestore";
-import {AiOutlineDelete} from "react-icons/ai"
+import {updateDoc, doc,onSnapshot} from "firebase/firestore";
+import { BsTrashFill} from "react-icons/bs";
 import { AuthContext } from "../contexts/AuthProvider";
 import HeaderBiblio from "../components/HeaderBiblio";
 import NoFav from "../components/NoFav";
@@ -18,6 +18,7 @@ const FavoritesBiblio = () => {
     onSnapshot(favBiblioID, (favoriteBiblio) => {
     setFavBiblio(favoriteBiblio.data().favoritesBiblio)
     })
+    // eslint-disable-next-line
   }, [currentUser.uid]);
 /*BORRAR FAVORITO */
 const deletedBiblio = async (passedID) => {
@@ -48,11 +49,12 @@ const deletedBiblio = async (passedID) => {
                         <a
                           href={item.url}
                           target='_blank'
+                          rel="noreferrer"
                         >info</a>
                       </button>
                     </div>
                     <button className="justify-self-end self-end mr-3 mb-2" onClick={()=>deletedBiblio(item.id)}>
-                      <AiOutlineDelete/>
+                      <BsTrashFill size={25} color="red"/>
                     </button>
                   </div>
                 )

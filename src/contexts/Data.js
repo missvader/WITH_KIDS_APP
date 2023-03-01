@@ -10,10 +10,8 @@ const biblio = axios.create({
   baseURL: "https://do.diba.cat/api/dataset/actesbiblioteques_ca/format/json/pag-ini/1/pag-fi/29999/camp-categoria-like/infants/camp-rel_municipis-like/08019/"
 })
 function Data({children}){
-  const initialState = {
-    isLoading : true,
-    userLocation : undefined,
-  }
+  const  isLoading = true;
+  const userLocation = undefined;
 
 	//DATA STATES
   const [actividades, setActividades] = useState([]);
@@ -116,8 +114,8 @@ useEffect(() => {
     <DataContext.Provider value={{
       actividades,
       actBiblio,
-      isLoading: true,
-      userLocation: undefined,
+      isLoading,
+      userLocation,
       geoAgenda,
       geoBiblio,
       geoRestaurantes, 

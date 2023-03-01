@@ -3,9 +3,6 @@ import React, { useRef, useEffect, useContext} from 'react';
 import mapboxgl from 'mapbox-gl'; 
 
 import { DataContext } from "../contexts/DataContext";
-import IconNaranja from "../assets/icons-map/_event-ticket.svg";
-import IconLila from "../assets/icons-map/_event-book.svg";
-import IconYellow from "../assets/icons-map/_restaurant.svg"
 import IconNaranjaPng from "../assets/iconos-map-png/_event-ticket.png";
 import IconLilaPng from "../assets/iconos-map-png/_event-book.png";
 import IconYellowPng from "../assets/iconos-map-png/_restaurant.png"
@@ -17,13 +14,10 @@ const Map = () => {
   const {  geoAgenda, geoBiblio, geoRestaurantes} = useContext(DataContext);
   const mapContainer = useRef(null);
   const imageIconLila = new Image();
-  /*imageIconLila.src = IconLila;*/
   imageIconLila.src = IconLilaPng;
   const imageIconNaranja = new Image();
-  /*imageIconNaranja.src= IconNaranja;*/
   imageIconNaranja.src= IconNaranjaPng;
   const imageIconYellow = new Image();
-  /*imageIconYellow.src = IconYellow;*/
   imageIconYellow.src= IconYellowPng;
   
   // this is where all of our map logic is going to live
@@ -37,20 +31,7 @@ const Map = () => {
       zoom: 11.5,
       
     });
-    /*const getMobileOS = () => {
-      const ua = navigator.userAgent
-      if (/android/i.test(ua)) {
-        return "Android"
-      }
-      else if (/iPad|iPhone|iPod/.test(ua))
-         if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1){
-        return "iOS"
-      }
-      return "Other"
-    }
-    let sistema = getMobileOS();
-    alert("sistema operativo",sistema)*/
-
+    
     // only want to work with the map after it has fully loaded
     map.on("load", () => {
       map.addImage('lila', imageIconLila);
@@ -117,7 +98,7 @@ const Map = () => {
       return;
       }
       const feature = features[0];
-      const popup1 = new mapboxgl.Popup({ offset: [0, -15] , className:"parc-popup"})
+      new mapboxgl.Popup({ offset: [0, -15] , className:"parc-popup"})
       .setLngLat(feature.geometry.coordinates)
       .setHTML(
       `<h3>AREA JOC INFANTIL</h3><p>ADREÇA: ${feature.properties.Adreca}</p><p>BARRI: ${feature.properties.Codi_Barri}</p><p>DISTRICTE: ${feature.properties.Codi_Districte}</p>`
@@ -133,7 +114,7 @@ const Map = () => {
       return;
       }
       const feature = features[0];
-      const popup2 = new mapboxgl.Popup({ offset: [0, -15] , className:"agenda-popup"})
+      new mapboxgl.Popup({ offset: [0, -15] , className:"agenda-popup"})
       .setLngLat(feature.geometry.coordinates)
       .setHTML(
       `<h3>${feature.properties.titol}</h3><p>ESPAI: ${feature.properties.espai}</p>`
@@ -149,7 +130,7 @@ const Map = () => {
       return;
       }
       const feature = features[0];
-      const popup2 = new mapboxgl.Popup({ offset: [0, -15] , className:"biblio-popup"})
+      new mapboxgl.Popup({ offset: [0, -15] , className:"biblio-popup"})
       .setLngLat(feature.geometry.coordinates)
       .setHTML(
       `<h3>${feature.properties.titol}</h3><p>ESPAI: ${feature.properties.organitzadors}</p>`
@@ -165,7 +146,7 @@ const Map = () => {
       return;
       }
       const feature = features[0];
-      const popup2 = new mapboxgl.Popup({ offset: [0, -15] , className:"rest-popup"})
+      new mapboxgl.Popup({ offset: [0, -15] , className:"rest-popup"})
       .setLngLat(feature.geometry.coordinates)
       .setHTML(
       `<h3>${feature.properties.name}</h3><p>${feature.properties.address}</p>`
@@ -175,6 +156,7 @@ const Map = () => {
    
   // cleanup function to remove map on unmount
     return () => map.remove()
+    //eslint-disable-next-line
   },[])
   return (
     <div ref={mapContainer} className="map-container map "></div>

@@ -114,6 +114,7 @@ const Actividad = ({titol,id, adreca, espai,horari,tags, telefon, email, data, i
           ><a
             href={linkToUrl}
             target='_blank'
+            rel="noreferrer"
             >+ INFO</a>
           </button>
         </div>
