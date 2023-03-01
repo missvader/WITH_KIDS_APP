@@ -13,7 +13,9 @@ Data provides from 3 different API:
 <br>
 
 ## **Preview**
-## ![preview gif](src/assets/preview/withkids-preview.gif) ![preview gif](src/assets/preview/withkids-preview2.gif) ! [preview gif](src/assets/preview/withkids-preview3.gif) 
+## ![preview gif](src/assets/preview/withkids-preview.gif)
+## ![preview gif](src/assets/preview/withkids-preview2.gif)
+## ![preview gif](src/assets/preview/withkids-preview3.gif) 
 
 ---
 
