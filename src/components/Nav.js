@@ -13,17 +13,17 @@ const Nav = () => {
 
   return (
     <div className="absolute">
-      <div className="btm-nav flex flex-col pb-5 bg-blanco w-full pb-5  rounded-t">
-        <div className="flex m-auto ">
+      <div className="btm-nav flex flex-col py-5 bg-blanco w-full rounded-t border border-1 border-stone-400">
+        <div className="flex m-auto pb-7">
           <NavLink
           to={"./"}
           >
-            <button className="btn btn-xs bg-stone-400 border-0">
-            <Icon path={mdiMapOutline} size={1} />
+            <button className=" bg-stone-400 btn btn-xs border-0 lg:btn lg:rounded-full ">
+            <Icon path={mdiMapOutline} size={1} className=""/>
             </button>
           </NavLink>
         </div>
-        <div className="flex flex-row w-full">
+        <div className="flex flex-row w-full py-10 justify-around ">
           {currentUser !== null?
           (<NavLink
           to={"./profile"}

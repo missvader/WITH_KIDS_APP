@@ -42,13 +42,11 @@
   display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
     padding: 10px 15px;
     cursor: pointer;
     transition: all 0.2s ease-out;
 }
 .nav-item.active {
-  flex-grow: 3;
   border-radius: 30px;
   background: #eee;
   justify-content: flex-start;
